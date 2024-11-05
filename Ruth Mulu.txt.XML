@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xbrl xmlns='http://www.xbrl.org/2003/instance'
+      xmlns:xbrli='http://www.xbrl.org/2003/instance'
+      xmlns:link='http://www.xbrl.org/2003/linkbase'
+      xmlns:xlink='http://www.w3.org/1999/xlink'
+      xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+      xmlns:iso4217='http://www.xbrl.org/2003/iso4217'
+      xmlns:us-gaap='http://fasb.org/us-gaap/2015-01-31'
+      xsi:schemaLocation='http://www.xbrl.org/2003/instance http://www.xbrl.org/2003/instance.xsd
+                          http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/linkbase.xsd
+                          http://www.w3.org/1999/xlink http://www.w3.org/1999/xlink.xsd
+                          http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema-instance.xsd
+                          http://www.xbrl.org/2003/iso4217 http://www.xbrl.org/2003/iso4217.xsd
+                          http://fasb.org/us-gaap/2015-01-31 http://fasb.org/us-gaap/2015-01-31.xsd'>
+
+   <link:schemaRef xlink:type='simple' xlink:href='mytaxonomy.xsd' />
+
+   <!-- Contexts for Balance Sheets (2022 and 2023) -->
+   <context id='amazonBS2022'>
+      <entity>
+         <identifier scheme='www.sec.gov/cik'>0001018724</identifier>
+      </entity>
+      <period>
+         <instant>2022-12-31</instant>
+      </period>
+   </context>
+   
+   <context id='amazonBS2023'>
+      <entity>
+         <identifier scheme='www.sec.gov/cik'>0001018724</identifier>
+      </entity>
+      <period>
+         <instant>2023-12-31</instant>
+      </period>
+   </context>
+   
+   <!-- Contexts for Income Statements (2021, 2022, and 2023) -->
+   <context id='amazonIS2021'>
+      <entity>
+         <identifier scheme='www.sec.gov/cik'>0001018724</identifier>
+      </entity>
+      <period>
+         <startDate>2021-01-01</startDate>
+         <endDate>2021-12-31</endDate>
+      </period>
+   </context>
+   
+   <context id='amazonIS2022'>
+      <entity>
+         <identifier scheme='www.sec.gov/cik'>0001018724</identifier>
+      </entity>
+      <period>
+         <startDate>2022-01-01</startDate>
+         <endDate>2022-12-31</endDate>
+      </period>
+   </context>
+   
+   <context id='amazonIS2023'>
+      <entity>
+         <identifier scheme='www.sec.gov/cik'>0001018724</identifier>
+      </entity>
+      <period>
+         <startDate>2023-01-01</startDate>
+         <endDate>2023-12-31</endDate>
+      </period>
+   </context>
+   
+   <!-- Balance Sheet Items for 2022, and 2023 -->
+   <!-- Balance Sheet Items: Cash and Cash Equivalents, Treasury Stock at Cost, Accounts Payables -->
+   <!-- 2022 Data -->
+   <us-gaap:CashAndCashEquivalents contextRef='amazonBS2022' unitRef='usd' decimals='0'>53888000000</us-gaap:CashAndCashEquivalents>
+   <us-gaap:TreasuryStockAtCost contextRef='amazonBS2022' unitRef='usd' decimals='0'>-7837000000</us-gaap:TreasuryStockAtCost>
+   <us-gaap:AccountsPayable contextRef='amazonBS2022' unitRef='usd' decimals='0'>79600000000</us-gaap:AccountsPayable>
+   
+   <!-- 2023 Data -->
+   <us-gaap:CashAndCashEquivalents contextRef='amazonBS2023' unitRef='usd' decimals='0'> 73387000000</us-gaap:CashAndCashEquivalents>
+   <us-gaap:TreasuryStockAtCost contextRef='amazonBS2023' unitRef='usd' decimals='0'>-7837000000</us-gaap:TreasuryStockAtCost>
+   <us-gaap:AccountsPayable contextRef='amazonBS2023' unitRef='usd' decimals='0'>84981000000</us-gaap:AccountsPayable>
+   
+   <!-- Income Statement Items for 2021, 2022, and 2023 -->
+   <!-- Income Statement Items: General and Administrative Expense, Interest Expense, Sales and Marketing -->
+   <!-- 2021 Data -->
+   <us-gaap:GeneralAndAdministrativeExpense contextRef='amazonIS2021' unitRef='usd' decimals='0'>8823000000</us-gaap:GeneralAndAdministrativeExpense>
+   <us-gaap:InterestExpense contextRef='amazonIS2021' unitRef='usd' decimals='0'>-1809000000</us-gaap:InterestExpense>
+   <us-gaap:MarketingExpense contextRef='amazonIS2021' unitRef='usd' decimals='0'>32551000000</us-gaap:MarketingExpense>
+   
+   <!-- 2022 Data -->
+   <us-gaap:GeneralAndAdministrativeExpense contextRef='amazonIS2022' unitRef='usd' decimals='0'>11891000000</us-gaap:GeneralAndAdministrativeExpense>
+   <us-gaap:InterestExpense contextRef='amazonIS2022' unitRef='usd' decimals='0'>-2367000000</us-gaap:InterestExpense>
+   <us-gaap:MarketingExpense contextRef='amazonIS2022' unitRef='usd' decimals='0'>42238000000</us-gaap:MarketingExpense>
+   
+   <!-- 2023 Data -->
+   <us-gaap:GeneralAndAdministrativeExpense contextRef='amazonIS2023' unitRef='usd' decimals='0'>11816000000</us-gaap:GeneralAndAdministrativeExpense>
+   <us-gaap:InterestExpense contextRef='amazonIS2023' unitRef='usd' decimals='0'>-3182000000</us-gaap:InterestExpense>
+   <us-gaap:MarketingExpense contextRef='amazonIS2023' unitRef='usd' decimals='0'>44370000000</us-gaap:MarketingExpense>
+
+</xbrl>
